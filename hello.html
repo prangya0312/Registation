@@ -1,0 +1,97 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" 
+    href="hello.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+     <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+    <script>
+       $(document).ready(function () {
+    $("#RightToLeft").on("click", function () {
+        $("#slide").animate({
+            marginLeft: "0",
+        });
+        $(".top").animate({
+            marginLeft: "100%",
+        });
+    });
+    $("#LeftToRight").on("click", function () {
+        $("#slide").animate({
+            marginLeft: "50%",
+        });
+        $(".top").animate({
+            marginLeft: "0",
+        });
+    });
+});
+</script>
+</head>
+ 
+<body>
+    <div id="background">
+        <div class="background-Right"></div>
+        <div class="background-Left"></div>
+    </div>
+ 
+    <div id="slide">
+        <div class="top">
+            <div class="left">
+                <div class="content">
+                    <h2>Sign Up</h2>
+                    <form method="post"
+                        onsubmit="return false;">
+                        <div>
+                            <input type="text"
+                                placeholder="email" /> 
+                             
+                            <br />
+                            <input type="password"
+                                placeholder="password" />
+                        </div>
+                    </form>
+ 
+                    <button id="LeftToRight"
+                        class="on-off">Login
+                    </button>
+                     
+                    <button>Register</button>
+                </div>
+            </div>
+ 
+            <div class="right">
+                <div class="content">
+                    <h2>Login</h2>
+                    <form method="post"
+                        onsubmit="return false;">
+                        <div>
+                            <input type="text"
+                                placeholder="email" /> 
+                             
+                            <br />
+                            <input type="password"
+                                placeholder="password" />
+                        </div>
+ 
+                        <button id="RightToLeft"
+                            class="on-off">Register
+                        </button>
+                         
+                        <button>Login</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html
